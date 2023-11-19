@@ -1,0 +1,17 @@
+.vs
+HotelBooking.BookingDTO\bin\Debug\net7.0
+HotelBooking.BookingDTO\obj
+HotelBooking.DataAccess\obj"
+HotelBooking.DataAccess\Migrations
+HotelBooking.DataAccess\bin
+HotelBooking.Entities\bin
+HotelBooking.Entities\obj
+HotelBooking.Services\bin
+HotelBooking.Services\obj
+HotelBooking.Services.Contracts\bin
+HotelBooking.Services.Contracts\obj
+webhotel\bin
+webhotel\obj
+webhotel\Properties
+webhotel\HotelBooking.csproj
+webhotel\HotelBooking.csproj.user

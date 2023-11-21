@@ -13,5 +13,6 @@ namespace HotelBooking.BookingDTO
         public string Address { get; set; }
         public decimal PricePerNight { get; set; }
         public double Rating { get; set; }
+        
     }
 }

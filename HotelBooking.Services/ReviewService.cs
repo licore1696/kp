@@ -1,31 +1,29 @@
 ﻿using AutoMapper;
 using HotelBooking.BookingDTO;
-using HotelBooking.DataAccess.Repository;
 using HotelBooking.DataAccess.Repository.Contracts;
 using HotelBooking.Entities;
 using HotelBooking.Services.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace HotelBooking.Services
 {
     public class ReviewService : IReviewService
     {
         public readonly IReviewRepository _reviewRepository;
+        public readonly IHotelRepository _hotelRepository;
         public readonly IMapper _mapper;
 
-        public ReviewService(IReviewRepository reviewRepository, IMapper mapper)
+        public ReviewService(IReviewRepository reviewRepository, IHotelRepository hotelRepository, IMapper mapper)
         {
             _reviewRepository = reviewRepository;
+            _hotelRepository = hotelRepository;
             _mapper = mapper;
         }
 
         public async Task<int> Create(ReviewDto reviewDto)
         {
             var reviewToAdd = _mapper.Map<Review>(reviewDto);
+            var existingHotel = await _hotelRepository.GetById(reviewDto.HotelId)??throw new Exception("No hotel");
 
             return await _reviewRepository.Create(reviewToAdd);
         }

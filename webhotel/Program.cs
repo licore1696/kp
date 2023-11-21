@@ -44,13 +44,14 @@ builder.Services.AddScoped<IReviewService, ReviewService>();//singleton
 
 builder.Services.AddAutoMapper(typeof(UserProfile));
 
-builder.Services.AddAutoMapper(typeof(HotelProfile));
+
+/*builder.Services.AddAutoMapper(typeof(HotelProfile));
 
 builder.Services.AddAutoMapper(typeof(ReviewProfile));
 
 builder.Services.AddAutoMapper(typeof(RoomProfile));
 
-builder.Services.AddAutoMapper(typeof(BookingProfile));
+builder.Services.AddAutoMapper(typeof(BookingProfile));*/
 
 
 
